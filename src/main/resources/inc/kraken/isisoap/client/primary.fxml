@@ -35,7 +35,7 @@
             </VBox>
             <VBox layoutX="14.0" layoutY="77.0" prefHeight="53.0" prefWidth="171.0">
                <children>
-                  <Label text="Cat égorie" />
+                  <Label text="Prénom" />
                   <JFXTextField fx:id="txtLastname" promptText="Entrer la prénom" />
                </children>
             </VBox>
