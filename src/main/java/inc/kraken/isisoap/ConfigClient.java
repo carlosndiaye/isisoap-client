@@ -26,7 +26,7 @@ public class ConfigClient {
     @Bean
     public PersonClient personClient(Jaxb2Marshaller marshaller) {
         PersonClient client = new PersonClient();
-        client.setDefaultUri("http://localhost:8080/isisoap/api/persons.wsdl");
+        client.setDefaultUri("https://isisoap.herokuapp.com/api/persons.wsdl");
         client.setMarshaller(marshaller);
         client.setUnmarshaller(marshaller);
         return client;

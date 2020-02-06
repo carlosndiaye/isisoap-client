@@ -29,13 +29,13 @@ public class PersonClient extends WebServiceGatewaySupport {
 		GetPersonByIdRequest request = new GetPersonByIdRequest();
 		request.setPersonId(personId);
 		GetPersonByIdResponse response = (GetPersonByIdResponse) getWebServiceTemplate().marshalSendAndReceive(
-				request, new SoapActionCallback("http://localhost:8080/isisoap/api/getPersonByIdRequest"));
+				request, new SoapActionCallback("https://isisoap.herokuapp.com/api/getPersonByIdRequest"));
 		return response;
 	}
 	public GetAllPersonsResponse getAllPersons() {
 		GetAllPersonsRequest request = new GetAllPersonsRequest();
 		GetAllPersonsResponse response = (GetAllPersonsResponse) getWebServiceTemplate().marshalSendAndReceive(
-				request, new SoapActionCallback("http://localhost:8080/isisoap/api/getAllPersonsRequest"));
+				request, new SoapActionCallback("https://isisoap.herokuapp.com/api/getAllPersonsRequest"));
      	        return response;
 	}	
 	public AddPersonResponse addPerson(String firstname, String lastname) {
@@ -43,21 +43,21 @@ public class PersonClient extends WebServiceGatewaySupport {
 		request.setFirstname(firstname);
 		request.setLastname(lastname);
 		AddPersonResponse response = (AddPersonResponse) getWebServiceTemplate().marshalSendAndReceive(
-				request, new SoapActionCallback("http://localhost:8080/isisoap/api/addPersonRequest"));
+				request, new SoapActionCallback("https://isisoap.herokuapp.com/api/addPersonRequest"));
      	        return response;
 	}	
 	public UpdatePersonResponse updatePerson(PersonInfo personInfo) {
 		UpdatePersonRequest request = new UpdatePersonRequest();
 		request.setPersonInfo(personInfo);
 		UpdatePersonResponse response = (UpdatePersonResponse) getWebServiceTemplate().marshalSendAndReceive(
-				request, new SoapActionCallback("http://localhost:8080/isisoap/api/updatePersonRequest"));
+				request, new SoapActionCallback("https://isisoap.herokuapp.com/api/updatePersonRequest"));
      	        return response;
 	}	
 	public DeletePersonResponse deletePerson(long personId) {
 		DeletePersonRequest request = new DeletePersonRequest();
 		request.setPersonId(personId);
 		DeletePersonResponse response = (DeletePersonResponse) getWebServiceTemplate().marshalSendAndReceive(
-				request, new SoapActionCallback("http://localhost:8080/isisoap/api/deletePersonRequest"));
+				request, new SoapActionCallback("https://isisoap.herokuapp.com/api/deletePersonRequest"));
      	        return response;
 	}
 }

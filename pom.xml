@@ -137,7 +137,7 @@
                     <generatePackage>inc.kraken.wsdl</generatePackage>
                     <schemas>
                         <schema>
-                            <url>http://localhost:8080/isisoap/api/persons.wsdl</url>
+                            <url>https://isisoap.herokuapp.com/api/persons.wsdl</url>
                         </schema>
                     </schemas>
                 </configuration>
